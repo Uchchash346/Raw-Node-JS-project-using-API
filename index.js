@@ -6,6 +6,7 @@
 */
 // dependencies
 const http = require('http');
+const { handleReqRes } = require('./helpers/handleReqRes');
 
 // app object - module scaffolding 
 const app = {};
@@ -24,10 +25,7 @@ app.createServer = () => {
 }
 
 // handle Request Response
-app.handleReqRes = (req, res) => {
-    // response handle
-    res.end("Hello Uchchash")
-}
+app.handleReqRes = handleReqRes;
 
 // start the server
 app.createServer();
